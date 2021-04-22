@@ -6,7 +6,7 @@ class Game{
         var gameStateRef = database.ref('gameState');
         gameStateRef.on("value", function (data) {
             gameState = data.val();
-        })
+        }) 
 
     }
 
@@ -33,7 +33,7 @@ class Game{
     player2.addImage("player2", player_img);
     players=[player1,player2];
 
-        }
+    }
     
     play(){
         
@@ -65,14 +65,11 @@ class Game{
                         //cars[index - 1].shapeColor = "red";
                         camera.position.x = displayWidth/2;
                         camera.position.y = players[index-1].y;
-                      }
+                       }
 
                          
-                     }
-                    
-                      
-                 
-                 }
+                    }
+
                 
                 
                  
@@ -104,7 +101,7 @@ class Game{
                      }
                      fruitGroup.add(fruits);
                      
-                 }
+                    }
                  
                   if (player.index !== null) {
                     for (var i = 0; i < fruitGroup.length; i++) {
@@ -116,7 +113,7 @@ class Game{
                         }
                         
                     }
-                  }
+                }
                 
 
          
@@ -127,6 +124,8 @@ class Game{
     }
 
     end(){
-       console.log("Game Ended");
+        console.log("Game Ended");
     }
 }
+}
+
