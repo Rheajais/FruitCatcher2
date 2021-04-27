@@ -107,7 +107,14 @@ class Game{
                     for (var i = 0; i < fruitGroup.length; i++) {
                         if (fruitGroup.get(i).isTouching(players)) {
                             fruitGroup.get(i).destroy();
+                            player.score=player.score+1;
+                            textSize(20);
+                            text("Player1 : ",300,500);       
+                            text("Player2 : ",350,550);
                             
+                            player.update();
+
+
                          
                             
                         }
@@ -123,9 +130,10 @@ class Game{
 
     }
 
-    end(){
-        console.log("Game Ended");
-    }
+
+}
+end(){
+    console.log("Game Ended");
 }
 }
 
