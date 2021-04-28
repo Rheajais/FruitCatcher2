@@ -67,7 +67,10 @@ class Game{
                         camera.position.y = players[index-1].y;
                        }
 
-                         
+                       textSize(20);
+                       text("Player1 : "+allPlayers.player1.score,300,500);       
+                       text("Player2 : "+allPlayers.player2.score,350,550);
+                    
                     }
 
                 
@@ -108,9 +111,7 @@ class Game{
                         if (fruitGroup.get(i).isTouching(players)) {
                             fruitGroup.get(i).destroy();
                             player.score=player.score+1;
-                            textSize(20);
-                            text("Player1 : ",300,500);       
-                            text("Player2 : ",350,550);
+                          
                             
                             player.update();
 
@@ -123,8 +124,7 @@ class Game{
                 }
                 
 
-         
-         
+                
         
          
 
